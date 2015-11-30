@@ -76,12 +76,13 @@ def readadc(channelNumber, clockPin, kitoutputPin, kitInputPin, chipSelectPin):
         return readInput
 
 
+# do not forget to change these to meet your own wiring
 SPICLK = port.PE9
 SPIMISO = port.PE8
 SPIMOSI = port.PE7
 SPICS = port.PE6
 
-# Initialization of the gpios used
+# Initialization of the used gpios
 gpio.setcfg(SPIMOSI, gpio.OUTPUT)
 gpio.setcfg(SPIMISO, gpio.INPUT)
 gpio.setcfg(SPICLK, gpio.OUTPUT)
